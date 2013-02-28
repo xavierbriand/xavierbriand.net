@@ -18,9 +18,6 @@ too, and `take pictures, a lot`_,
 
 Yes, I've got long days.
 
-If you are from Toronto Canada and you need a web developer, I'm actively seeking
-**full-time position** from july 2012.
-
 You can find me as **xavierbriand** here, here and also here on Internet:
 
 * |twitter logo| `@xavierbriand`_
