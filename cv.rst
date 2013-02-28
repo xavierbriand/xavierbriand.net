@@ -14,13 +14,13 @@ Currently **senior developer** at **ExperiencePoint**, and **Web & mobile
 developer** (Founding partner) at **Freegli.com**.
 
 My speciality is **designing and developing web applications** with Open Sources
-technologies. I'm fully proficient with **PHP 5.3**, **Symfony2** framework
-[#symfony]_, on a Linux/MacOs environment with a keyboard and a Vim editor.
+technologies. I'm fully proficient with **PHP 5.4**, **Symfony2** framework
+[#symfony]_, on a Linux/MacOs/FreeBSD environment with a keyboard and a Vim editor.
 
-I'm working on **e-commerce** and **search engine** issues, Soap/Rest
-**webservices** (as server and client), and application scalability (uncoupling,
-optimisation, cache, replication, data partitioning, sharding, load balancing,
-failover, ...).
+I'm working on **SOA**, **e-commerce** and **search engine** issues, Soap/Rest
+**webservices** (as server and client), **OAuth2**, and application scalability
+(uncoupling, optimisation, cache, replication, data partitioning, sharding,
+load balancing, failover, ...).
 
 I have a **significant experiences as lead developer, trainer, coach**, and
 also in management of macro and micro planning, and HR (management, recruitment,
@@ -29,9 +29,10 @@ career manager).
 Otherwise I'm learning Python.
 
 * Macro and micro planning management (Project, Gantt)
-* POO PHP 5.3, framework MVC symfony 1.x and Symfony2
+* POO PHP 5.4, framework MVC symfony 1.x and Symfony2
 * ORM Doctrine1&2, Propel, Pomm
 * Soap/Rest Webservices
+* OAuth2
 * Web accessibility and standards, SEO
 * Web server administration
 * Objective-C, Cocoa, iOs
