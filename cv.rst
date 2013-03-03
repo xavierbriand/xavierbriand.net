@@ -17,8 +17,8 @@ My speciality is **designing and developing web applications** with Open Sources
 technologies. I'm fully proficient with **PHP 5.4**, **Symfony2** framework
 [#symfony]_, on a Linux/MacOs/FreeBSD environment with a keyboard and a Vim editor.
 
-I'm working on **SOA**, **e-commerce** and **search engine** issues, Soap/Rest
-**webservices** (as server and client), **OAuth2**, and application scalability
+I'm working on **HATEOAS** [#hateoas]_, **OAuth2** [#oauth2]_, **e-commerce**, **search engine**, and
+application scalability
 (uncoupling, optimisation, cache, replication, data partitioning, sharding,
 load balancing, failover, ...).
 
@@ -31,8 +31,8 @@ Otherwise I'm learning Python.
 * Macro and micro planning management (Project, Gantt)
 * POO PHP 5.4, framework MVC symfony 1.x and Symfony2
 * ORM Doctrine1&2, Propel, Pomm
+* HATEOAS, OAuth2
 * Soap/Rest Webservices
-* OAuth2
 * Web accessibility and standards, SEO
 * Web server administration
 * Objective-C, Cocoa, iOs
@@ -49,6 +49,17 @@ Experience
 ★ Senior Web Application Developer @ `ExperiencePoint`_
 .......................................................
 *from august 2012* Toronto, ON Canada
+
+About the company
+'''''''''''''''''
+ExperiencePoint helps individuals and their organizations achieve extraordinary
+results through deliberate practice. ExperiencePoint designs and delivers
+engaging, powerful simulations that enable focused experience with business
+theory, techniques, and tools.
+
+*Keywords*::
+
+    HATEOAS, OAuth2, Symfony2, Git
 
 ★ Developers' Team Leader @ `SensioLabs`_
 .........................................
@@ -84,8 +95,7 @@ Missions:
 
 *Keywords*::
 
-    HR, management, MSProject, Gantt, Redmine, Symfony2, Git, Gitolite, Twig,
-    Solr
+    HR, management, MSProject, Gantt, Redmine, Symfony2, Git, Gitolite, Twig, Solr
 
 ★ Web & mobile developer (Founding partner) @ `Freegli.com`_
 .............................................................
@@ -107,8 +117,7 @@ Notification Service**. See my `github repo`_.
 
 *Keywords*::
 
-    Startup, project management, Symfony2, Doctrine2, PostgreSQL, scalability,
-    MySQL, Git, Rest webservice, web mobile, Objective-C, Cocoa
+    Startup, project management, Symfony2, Doctrine2, PostgreSQL, scalability, MySQL, Git, Rest webservice, web mobile, Objective-C, Cocoa
 
 ★ PHP5 Symfony Web Developer @ `SensioLabs`_ & `Extreme Sensio`_
 .................................................................
@@ -153,8 +162,7 @@ Projects:
 
   *Keywords*::
 
-    symfony1, propel, ecommerce, search engine, load balancing, super cache,
-    SVN, lexing, parsing, stemming
+    symfony1, propel, ecommerce, search engine, load balancing, super cache, SVN, lexing, parsing, stemming
 
 * And:
 
@@ -196,8 +204,7 @@ Projects:
 
 *Keywords*::
 
-    WAMP, Eclipse PDT, SVN, symfony1.2, Drupal, Magento, personnal framework,
-    javascript, prototypeJS, mootools
+    WAMP, Eclipse PDT, SVN, symfony1.2, Drupal, Magento, personnal framework, javascript, prototypeJS, mootools
 
 ★ PHP5 Symfony Web Developer @ `Apsides Communication`_
 .......................................................
@@ -277,7 +284,7 @@ Extra-professional activities
 
 * Photography (`my flickr`_)
 * `Reading`_ (Fantasy, SciFi, geek)
-* Bicycling, hicking
+* Running, cycling, swimming, hicking
 * RPG (with real pen and paper inside)
 * Wargames (W40k)
 
@@ -286,8 +293,17 @@ Extra-professional activities
 `↑ to top ↑ <#>`_
 
 .. [#symfony] Symfony is a PHP Web Development Framework. See `Symfony website`_
+.. [#hateoas] Hypermedia as the Engine of Application State. The principle is
+   that a client interacts with a
+   network application entirely through hypermedia provided dynamically by
+   application servers (See `HATEOAS wikipedia entry`_)
+.. [#oauth2] OAuth is an open standard for authorization. OAuth provides a
+   method for clients to access server resources on behalf of a resource owner
+   (See `OAuth2 wikipedia entry`_)
 
 .. _`Symfony website`: http://symfony.com/
+.. _`HATEOAS wikipedia entry`: http://en.wikipedia.org/wiki/HATEOAS
+.. _`OAuth2 wikipedia entry`: http://en.wikipedia.org/wiki/OAuth#OAuth_2.0
 .. _`ExperiencePoint`: http://experiencepoint.com/
 .. _`SensioLabs`: http://sensiolabs.com/
 .. _`Extreme Sensio`: http://www.extreme-sensio.com/

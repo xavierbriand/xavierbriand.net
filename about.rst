@@ -12,9 +12,9 @@ games free for one day).
 There is an `iPhone app`_ too.
 
 Otherwise, I do a lot of other things (maybe too much!):
-go working with my bicycle, `read fantasy, SciFi, geek books`_ in the subway,
-play RPG with real paper and pen inside, do some warhammer 40k with my friends
-too, and `take pictures, a lot`_,
+training for a triathlon, go working with my bicycle,
+`read fantasy, SciFi, geek books`_, play RPG with real paper and pen inside, do
+some warhammer 40k with my friends too, and `take pictures, a lot`_,
 
 Yes, I've got long days.
 
