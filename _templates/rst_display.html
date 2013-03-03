@@ -4,8 +4,8 @@
 {% if not config.hide_title %}
     {% block main_title %}{{ rst.html_title }}{% endblock %}
 {% endif %}
-{% block description %}{{ rst.summary }}{% endblock %}
-{% block main_description %}{{ rst.summary }}{% endblock %}
+{% block description %}{% if ctx.summary %}{{ ctx.summary }}{% endif %}{% endblock %}
+{% block main_description %}{% endblock %}
 
 {% block body %}
     <article>
