@@ -15,7 +15,7 @@ developer** (Founding partner) at **Freegli.com**.
 
 My speciality is **designing and developing web applications** with Open Sources
 technologies. I'm fully proficient with **PHP 5.4**, **Symfony2** framework
-[#symfony]_, on a Linux/MacOs/FreeBSD environment with a keyboard and a Vim editor.
+[#symfony]_ (`Certified developer`_), on a Linux/MacOs/FreeBSD environment with a keyboard and a Vim editor.
 
 I'm working on **HATEOAS** [#hateoas]_, **OAuth2** [#oauth2]_, **e-commerce**, **search engine**, and
 application scalability
@@ -301,6 +301,7 @@ Extra-professional activities
    method for clients to access server resources on behalf of a resource owner
    (See `OAuth2 wikipedia entry`_)
 
+.. _`Certified developer`: https://connect.sensiolabs.com/badge/58/sensiolabs-certified-symfony-developer
 .. _`Symfony website`: http://symfony.com/
 .. _`HATEOAS wikipedia entry`: http://en.wikipedia.org/wiki/HATEOAS
 .. _`OAuth2 wikipedia entry`: http://en.wikipedia.org/wiki/OAuth#OAuth_2.0
