@@ -1,13 +1,8 @@
-<div class="pagination">
-    {% if pagination.has_prev %}
-        <a href="{{ link_to(pagination.url_key, page=pagination.page - 1) }}">&larr; Next</a>
-    {% endif %}
-
-    {% if pagination.has_prev and pagination.has_next %}
-        |
-    {% endif %}
-
-    {% if pagination.has_next -%}
-        <a href="{{ link_to(pagination.url_key, page=pagination.page + 1) }}">Previous &rarr;</a>
-    {%- endif -%}
-</div>
+<ul class="pager">
+    <li class="previous{% if not pagination.has_prev %} disabled{%endif %}">
+        <a href="{{ link_to(pagination.url_key, page=pagination.page - 1) }}">&larr; Newer</a>
+    </li>
+    <li class="next{% if not pagination.has_next %} disabled{%endif %}">
+        <a href="{{ link_to(pagination.url_key, page=pagination.page + 1) }}">Older &rarr;</a>
+    </li>
+</ul>

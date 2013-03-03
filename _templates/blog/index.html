@@ -1,38 +1,32 @@
 {% extends "layout.html" %}
-{% block title %}Blog{% endblock %}
-{% block body %}
 
+{% block body %}
     {%- for entry in pagination.get_slice() %}
-        <article>
-            <header>
-            </header>
-            <div class="text" id="blockquote">
-                <time>
-                    {{ format_date(entry.pub_date, format='medium') }}
-                </time>
-                <div class="post">
-                    <h2><a href="{{ link_to('page', slug=entry.slug) }}">{{ entry.title }}</a></h2>
-                    {% if entry.summary %}
-                        <p>{{ entry.summary }}</p>
-                    {% endif %}
+        <div class="featurette">
+            <h2 class="featurette-heading">
+                <a href="{{ link_to('page', slug=entry.slug) }}">{{ entry.title }}</a>
+            </h2>
+            {% if entry.summary %}
+                <div class="row">
+                    <blockquote class="pull-right">
+                        <p class="lead">{{ entry.summary }}</p>
+                    </blockquote>
                 </div>
-            </div>
-            <footer>
-                <div class="permalink">
-                    <a title="{{ entry.title }}" href="{{ link_to('page', slug=entry.slug) }}">permalink</a>
-                </div>
+            {% endif %}
+            <p class="right">
+                {{ format_date(entry.pub_date, format='medium') }},
+                <a title="{{ entry.title }}" href="{{ link_to('page', slug=entry.slug) }}">permalink</a>
+            </p>
+            <p class="right">
                 {% if entry.tags %}
-                    <ul class="tags">
-                        <li><strong>Tags: </strong></li>
-                        {% for tag in entry.tags|sort(case_sensitive=true) %}
-                            <li>
-                                <a href="{{ link_to('tag', tag=tag) }}">{{ tag }}</a>
-                            </li>
-                        {% endfor %}
-                    </ul>
+                    <strong>Tags: </strong></li>
+                    {% for tag in entry.tags|sort(case_sensitive=true) %}
+                         <span class="label"><a href="{{ link_to('tag', tag=tag) }}">{{ tag }}</a></span>
+                    {% endfor %}
                 {% endif %}
-            </footer>
-        </article>
+            </p>
+        </div>
+        <hr class="featurette-divider">
     {% endfor %}
 
     {% if show_pagination and pagination.pages > 1 %}

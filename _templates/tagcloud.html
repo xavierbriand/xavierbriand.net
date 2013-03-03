@@ -1,23 +1,14 @@
 {% extends "layout.html" %}
+
 {% block title %}Tags{% endblock %}
-{% block main_title %}
-Tags
-{% endblock %}
+{% block main_title %}Tags{% endblock %}
+{% block description %}{% endblock %}
+{% block main_description %}{% endblock %}
+
 {% block body %}
-    <article>
-        <header>
-        </header>
-        <div class="text" id="blockquote">
-            <div class="post">
-                <ul class=tagcloud>
-                {%- for tag in get_tags(limit=50) %}
-                    <li><a href="{{ link_to('tag', tag=tag.name) }}" style="font-size: {{
-                    tag.size }}%">{{ tag.name }}</a>
-                {%- endfor %}
-                </ul>
-            </div>
-        </div>
-        <footer>
-        </footer>
-    </article>
+    <p class="tags clearfix">
+    {%- for tag in get_tags(limit=50) %}
+        <a href="{{ link_to('tag', tag=tag.name) }}" style="font-size: {{ tag.size * 5 }}%">{{ tag.name }}</a>
+    {%- endfor %}
+    </p>
 {% endblock %}

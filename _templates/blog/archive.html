@@ -1,29 +1,24 @@
 {% extends "layout.html" %}
-{% block title %}Blog Archive{% endblock %}
 
+{% block title %}Blog Archive{% endblock %}
 {% block main_title %}Blog archive{% endblock %}
+{% block description %}{% endblock %}
+{% block main_description %}{% endblock %}
 
 {% block body %}
-    <article>
-        <header>
-        </header>
-        <div class="text" id="blockquote">
-            <div class="post">
-                <ul class=blog-archive>
-                {%- for entry in archive %}
-                    <li><a href="{{ link_to('blog_archive', year=entry.year) }}">{{ entry.year }}</a>
-                    <ul>
-                    {%- for subentry in entry.months %}
-                        <li><a href="{{ link_to('blog_archive', year=entry.year,
-                                                month=subentry.month) }}">{{ subentry.month_name }}</a>
-                        — {{ subentry.count }} {{ 'entry' if subentry.count == 1 else 'entries' }}
-                    {%- endfor %}
-                    </ul>
-                {%- endfor %}
-                </ul>
-            </div>
+    {%- for entry in archive %}
+        <div class="featurette">
+            <h2 class="featurette-heading">
+                <a href="{{ link_to('blog_archive', year=entry.year) }}">{{ entry.year }}</a>
+            </h2>
+            <ul>
+            {%- for subentry in entry.months %}
+                <li><a href="{{ link_to('blog_archive', year=entry.year,
+                                        month=subentry.month) }}">{{ subentry.month_name }}</a>
+                — {{ subentry.count }} {{ 'entry' if subentry.count == 1 else 'entries' }}
+            {%- endfor %}
+            </ul>
         </div>
-        <footer>
-        </footer>
-    </article>
+        <hr class="featurette-divider">
+    {%- endfor %}
 {% endblock %}

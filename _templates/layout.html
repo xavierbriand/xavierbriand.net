@@ -3,16 +3,10 @@
     <head>
         <meta charset="utf-8">
         <title>{% block title %}Home{% endblock %} | Xavier Briand: web developer, but not only</title>
-        <meta name="description" content="">
+        <meta name="description" content="{% block description %}Code, PHP, Symfony, photo, running, cycling, ...{% endblock %}">
         <meta name="author" content="Xavier Briand">
-
-        <!--[if lt IE 9]>
-        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-        <![endif]-->
-
-        <!-- Le styles -->
-        <link href="/static/bootstrap.min.css" rel="stylesheet">
-        <link href="/static/main.css" rel="stylesheet">
+        <link href="/static/screen.css" rel="stylesheet">
+        <link href="/static/screen-responsive.css" rel="stylesheet">
         <link href="/static/pygments.css" rel="stylesheet">
         <script type="text/javascript">
             var _gaq = _gaq || [];_gaq.push(['_setAccount', 'UA-2286238-5']);_gaq.push(['_trackPageview']);
@@ -22,33 +16,66 @@
                 var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
             })();
         </script>
-        <link href='http://fonts.googleapis.com/css?family=Wellfleet' rel='stylesheet' type='text/css'>
         <link rel="shortcut icon" href="/static/favicon.ico" />
         <link rel="icon" type="image/png" href="/static/favicon.png" />
-        <link rel="alternate" type="application/atom+xml" title="Xavier Briand" href="http://xavierbriand.net/feed.atom" />
+        <link rel="alternate" type="application/atom+xml" title="Xavier Briand" href="/feed.atom" />
     </head>
     <body>
-        <div id="container">
-            <div id="headerBg"></div>
-            <header>
-                <nav>
-                    <a href="http://xavierbriand.net">xavierbriand.net</a> |
-                    <a href="/about/">About me</a> |
-                    <a href="/cv/">CV</a> |
-                    <a href="/freegli/">About Freegli</a>
-                </nav>
-                <h1>
-                    {% block main_title %}Xavier Briand:<br />web developer<small>,<br />but not only</small>{% endblock %}
-                </h1>
-            </header>
-            <section>
-                {% block body %}{% endblock %}
-            </section>
-            <footer>
-                <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-sa/3.0/80x15.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text" property="dct:title" rel="dct:type">This Blog</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="http://xavierbriand.net" property="cc:attributionName" rel="cc:attributionURL">Xavier Briand</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/">Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License</a>.<br />Based on a work available on <a xmlns:dct="http://purl.org/dc/terms/" href="https://github.com/xavierbriand/xavierbriand.net" rel="dct:source">github.com</a>.
-            </footer>
+        <div class="navbar-wrapper">
+            <div class="container">
+                <div class="navbar navbar-inverse">
+                    <div class="navbar-inner">
+                        <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="brand" href="/">XavierBriand.net</a>
+
+                        <div class="nav-collapse collapse">
+                            <ul class="nav">
+                                <li class="divider-vertical"></li>
+                                <li><a href="/about/">About me</a></li>
+                                <li><a href="/cv/">CV</a></li>
+                                <li><a href="/freegli/">About Freegli</a></li>
+                            </ul>
+                            <ul class="nav pull-right">
+                                <li><a href="/tags/">Tags</a></li>
+                                <li><a href="/archive/">Archive</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
 
+        <div id="myCarousel" class="carousel slide">
+            <div class="carousel-inner">
+                <div class="item active">
+                    <img src="/static/img/lagoon.jpg" alt="">
+                    <div class="container">
+                        <div class="carousel-caption">
+                            <h1>{% block main_title %}Xavier Briand: web developer<small>, but not only</small>{% endblock %}</h1>
+                            <p class="lead">{% block main_description %}Code, PHP, Symfony, photo, running, cycling, ...{% endblock %}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--
+            <a class="left carousel-control" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+            <a class="right carousel-control" href="#myCarousel" data-slide="next">&rsaquo;</a>
+            -->
+        </div>
+
+        <div class="container marketing">
+            {% block body %}{% endblock %}
+            <footer>
+                <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-sa/3.0/80x15.png" /></a>
+                <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text" property="dct:title" rel="dct:type">This Blog</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="http://xavierbriand.net" property="cc:attributionName" rel="cc:attributionURL">Xavier Briand</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/">Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License</a>.
+                <br />
+                Based on a work available on <a xmlns:dct="http://purl.org/dc/terms/" href="https://github.com/xavierbriand/xavierbriand.net" rel="dct:source">github.com</a>.
+            </footer>
+        </div>
     </body>
 </html>
 

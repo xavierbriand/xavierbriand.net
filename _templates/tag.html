@@ -1,25 +1,38 @@
 {% extends "layout.html" %}
-{% block title %}Entries tagged “{{ tag.name }}”{% endblock %}
 
+{% block title %}Entries tagged “{{ tag.name }}”{% endblock %}
 {% block main_title %}
-Entries <a href="{{ link_to('tagcloud') }}">tagged</a> “{{ tag.name }}”
+    Entries <a href="{{ link_to('tagcloud') }}">tagged</a> “{{ tag.name }}”
 {% endblock %}
+{% block description %}{% endblock %}
+{% block main_description %}{% endblock %}
 
 {% block body %}
-    <article>
-        <header>
-        </header>
-        <div class="text" id="blockquote">
-            <div class="post">
-                <ul>
-                {%- for entry in entries %}
-                    <li><a href="{{ link_to('page', slug=entry.slug) }}">{{ entry.title }}</a>
-                    {%- if entry.pub_date %}<br />written on {{ format_date(entry.pub_date, format='long') }}{% endif %}
-                {%- endfor %}
-                </ul>
-            </div>
+    {%- for entry in entries %}
+        <div class="featurette">
+            <h2 class="featurette-heading">
+                <a href="{{ link_to('page', slug=entry.slug) }}">{{ entry.title }}</a>
+            </h2>
+            {% if entry.summary %}
+                <div class="row">
+                    <blockquote class="pull-right">
+                        <p class="lead">{{ entry.summary }}</p>
+                    </blockquote>
+                </div>
+            {% endif %}
+            <p class="right">
+                {{ format_date(entry.pub_date, format='medium') }},
+                <a title="{{ entry.title }}" href="{{ link_to('page', slug=entry.slug) }}">permalink</a>
+            </p>
+            <p class="right">
+                {% if entry.tags %}
+                    <strong>Tags: </strong></li>
+                    {% for tag in entry.tags|sort(case_sensitive=true) %}
+                         <span class="label"><a href="{{ link_to('tag', tag=tag) }}">{{ tag }}</a></span>
+                    {% endfor %}
+                {% endif %}
+            </p>
         </div>
-        <footer>
-        </footer>
-    </article>
+        <hr class="featurette-divider">
+    {%- endfor %}
 {% endblock %}

@@ -1,41 +1,30 @@
 {% extends "layout.html" %}
-{% block title %}{{ rst.title }}{% endblock %}
 
+{% block title %}{{ rst.title }}{% endblock %}
 {% if not config.hide_title %}
     {% block main_title %}{{ rst.html_title }}{% endblock %}
 {% endif %}
+{% block description %}{{ rst.summary }}{% endblock %}
+{% block main_description %}{{ rst.summary }}{% endblock %}
 
 {% block body %}
     <article>
-        <header>
-        </header>
-        <div class="text" id="blockquote">
-            {% if ctx.public %}
-                <time>
-                    {{ format_date(ctx.pub_date, format='medium') }}
-                </time>
-            {% endif %}
-            <div class="post">
-                {{ rst.fragment }}
-                <aside>
-                    If you have any question or comment, You can reach me on <a href="http://twitter.com/xavierbriand" title="@xavierbriand">twitter</a> on via <a href="mailto:&#120;&#097;&#118;&#105;&#101;&#114;&#098;&#114;&#105;&#097;&#110;&#100;&#032;&#064;&#032;&#103;&#109;&#097;&#105;&#108;&#032;&#046;&#032;&#099;&#111;&#109;">email</a>.
-                </aside>
-            </div>
-        </div>
-        <footer>
-            <div class="permalink">
-                <a title="{{ ctx.title }}" href="{{ link_to('page', slug=ctx.slug) }}">permalink</a>
-            </div>
+        {{ rst.fragment }}
+        <aside>
+            If you have any question or comment, You can reach me on <a href="http://twitter.com/xavierbriand" title="@xavierbriand">twitter</a> on via <a href="mailto:&#120;&#097;&#118;&#105;&#101;&#114;&#098;&#114;&#105;&#097;&#110;&#100;&#032;&#064;&#032;&#103;&#109;&#097;&#105;&#108;&#032;&#046;&#032;&#099;&#111;&#109;">email</a>.
+        </aside>
+        {% if ctx.public %}
+            <p class="right">
+                written on {{ format_date(ctx.pub_date, format='medium') }}, <a title="{{ ctx.title }}" href="{{ link_to('page', slug=ctx.slug) }}">permalink</a>
+            </p>
+        {% endif %}
+        <p class="right">
             {% if ctx.tags %}
-                <ul class="tags">
-                    <li><strong>Tags: </strong></li>
-                    {% for tag in ctx.tags|sort(case_sensitive=true) %}
-                        <li>
-                            <a href="{{ link_to('tag', tag=tag) }}">{{ tag }}</a>
-                        </li>
-                    {% endfor %}
-                </ul>
+                <strong>Tags: </strong></li>
+                {% for tag in ctx.tags|sort(case_sensitive=true) %}
+                        <span class="label"><a href="{{ link_to('tag', tag=tag) }}">{{ tag }}</a></span>
+                {% endfor %}
             {% endif %}
-        </footer>
+        </p>
     </article>
 {% endblock %}
