@@ -1,8 +1,12 @@
 <ul class="pager">
-    <li class="previous{% if not pagination.has_prev %} disabled{%endif %}">
+    {% if not pagination.has_next %}
+    <li class="previous">
         <a href="{{ link_to(pagination.url_key, page=pagination.page - 1) }}">&larr; Newer</a>
     </li>
-    <li class="next{% if not pagination.has_next %} disabled{%endif %}">
+    {%endif %}
+    {% if not pagination.has_prev %}
+    <li class="next">
         <a href="{{ link_to(pagination.url_key, page=pagination.page + 1) }}">Older &rarr;</a>
     </li>
+    {%endif %}
 </ul>
